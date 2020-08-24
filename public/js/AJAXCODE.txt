@@ -1,0 +1,26 @@
+f
+			$form=$(".add_member");
+			e.preventDefault();
+			$.ajax({
+			url:$form.attr("action"),
+			method:$form.attr("method"),
+			data:$form.serialize(),
+			success: function( response)
+			{
+				response = $.parseJSON( response );
+				alert(response);
+				if(response.success)
+				{
+					alert(response.success);
+				}
+				else if(response.error)
+				{
+					alert(response.error);
+				}
+				else if(response.missing_fields)
+				{
+					alert(response.missing_fields);
+				}
+				console.log(response);
+			}
+			});

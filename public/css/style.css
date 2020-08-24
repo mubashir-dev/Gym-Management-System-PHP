@@ -1,0 +1,9 @@
+.border_class
+{
+    border:1px solid red;
+    padding:10px;
+}
+.radius_zero
+{
+    border-radius:0px;
+}
